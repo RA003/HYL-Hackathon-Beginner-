@@ -112,8 +112,109 @@ player = pygame.image.load(os.path.join(img_dir, "player.png")).convert()
 map = pygame.image.load(os.path.join(img_dir, "map.png")).convert()
 
 #creating instance of player object
+
 P1 = Player(player, 325, 25, 1)
 map = Map(map, 300, 0, 500, 500)
 #Run the mainloop
 if __name__ == "__main__":
   main()
+  
+'''
+global total
+
+y=0  
+from tkinter import *
+from tkinter import ttk
+n= ttk.Notebook()
+f1= ttk.Frame(n)
+f2= ttk.Frame(n)
+f3= ttk.Frame(n)
+f4= ttk.Frame(n)
+
+
+window= ttk.Frame(n)
+
+
+def main(x):
+    global total
+    n.add(f1, text="1")
+    n.add(f2, text="2")
+    n.add(f3, text="3")
+    n.add(f4, text="4")
+
+
+    total= ttk.Label(window, text="0")
+
+    Label(f1,  text='insert para here').grid(row=1,column=2)
+    Label(f1, text="What is Tkinter?").grid(row=2,column=2)
+    Button(f1, text="Guided User Interface").bind(correct)
+    Button(f1, text="Guided User Interface").grid(row=3,column=1)
+    Button(f1, text="Variable", command=incorrect).grid(row=3,column=2)
+    Button(f1, text="Function", command=incorrect).grid(row=3,column=3)
+
+
+    Label(f2, text="What is Turtle?").grid(row=2,column=2)
+    Button(f2, 
+    text="GuidedUserInterface",command=incorrect2).grid(row=3,column=1)
+    Button(f2, text="Module", command=correct2).grid(row=3,column=2)
+    Button(f2, text="Boolean Value", command=incorrect2).grid(row=3,column=3)
+
+    Label(f3, text="What does the 'Print' command do?").grid(row=2,column=2)
+    Button(f3, text="Creater a window",command=incorrect3).grid(row=3,column=1)
+    Button(f3, text="Show a message in the Python Shell", command=correct3).grid(row=3,column=2)
+    Button(f3, text="Print to the printer", command=incorrect3).grid(row=3,column=3)
+
+    Label(f4, text="What is the moniter?").grid(row=2,column=2)
+    Button(f4, text="A display that shows what the computer is doing",command=correct4).grid(row=3,column=1)
+    Button(f4, text="A circut board", command=incorrect4).grid(row=3,column=2)
+    Button(f4, text="A Program", command=incorrect4).grid(row=3,column=3)
+
+
+    return total
+
+
+
+def correct():
+    global total
+    Label(f1, text="Correct").grid(row=1,column=2)
+    counter()
+def incorrect():
+    Label(f1, text="Incorrect").grid(row=1,column=2)
+
+def correct2():
+    global total
+    Label(f2, text="Correct").grid(row=1,column=2)
+    counter()
+
+def incorrect2():
+    Label(f2, text="Incorrect").grid(row=1,column=2)
+
+def correct3():
+    global total
+    Label(f3, text="Correct").grid(row=1,column=2)
+    counter()
+
+def incorrect3():
+    Label(f3, text="Incorrect").grid(row=1,column=2)
+
+def correct4():
+    global total
+    Label(f4, text="Correct").grid(row=1,column=2)
+    counter()
+
+def incorrect4():
+    Label(f4, text="Incorrect").grid(row=1,column=2)
+
+
+def counter():
+    global total
+    total['text'] = str(int(total['text']) + 1)
+
+
+main(y)
+
+
+n.pack()
+
+n.mainloop()
+'''
