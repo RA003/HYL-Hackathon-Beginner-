@@ -146,16 +146,15 @@ def main(x):
     total= ttk.Label(window, text="0")
 
     Label(f1,  text='insert para here').grid(row=1,column=2)
-    Label(f1, text="What is Tkinter?").grid(row=2,column=2)
-    Button(f1, text="Guided User Interface").bind(correct)
-    Button(f1, text="Guided User Interface").grid(row=3,column=1)
-    Button(f1, text="Variable", command=incorrect).grid(row=3,column=2)
-    Button(f1, text="Function", command=incorrect).grid(row=3,column=3)
+    Label(f1, text="question 1").grid(row=2,column=2)
+    Button(f1, text="option 1").bind(correct)
+    Button(f1, text="option 2").grid(row=3,column=1)
+    Button(f1, text="option 3", command=incorrect).grid(row=3,column=2)
+    Button(f1, text="option 4", command=incorrect).grid(row=3,column=3)
 
 
     Label(f2, text="What is Turtle?").grid(row=2,column=2)
-    Button(f2, 
-    text="GuidedUserInterface",command=incorrect2).grid(row=3,column=1)
+    Button(f2, text="GuidedUserInterface",command=incorrect2).grid(row=3,column=1)
     Button(f2, text="Module", command=correct2).grid(row=3,column=2)
     Button(f2, text="Boolean Value", command=incorrect2).grid(row=3,column=3)
 
